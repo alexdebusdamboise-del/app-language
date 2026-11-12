@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agences pilotes : un assistant IA pour le recrutement et les remplacements en aide à domicile</title>
+  <meta name="description" content="Projet en cours de développement. Je cherche 10 agences d'aide à domicile pour concevoir et tester un assistant IA qui répond aux candidats et cherche les remplaçants.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <p class="status" role="note">
+    <strong>Produit en cours de développement.</strong>
+    Rien n'est encore en vente : je cherche 10 agences pour le construire avec elles.
+  </p>
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Projet pilote · aide à domicile</p>
+      <h1>Un assistant IA pour le recrutement et les remplacements de votre agence.</h1>
+      <p class="lead">
+        Il répondra à vos candidats par WhatsApp, SMS ou téléphone, relancera votre vivier
+        et cherchera un remplaçant quand une intervenante est absente.
+        Vous gardez chaque décision.
+      </p>
+      <p class="cta-row">
+        <a class="button" href="#inscription">Proposer mon agence</a>
+        <span class="cta-note">10 agences pilotes · sans engagement</span>
+      </p>
+    </div>
+
+    <figure class="chat" aria-label="Exemple de conversation entre l'assistant et une candidate">
+      <div class="chat-window">
+        <p class="bubble in">Bonjour, j'ai vu votre annonce d'auxiliaire de vie. Le poste est toujours ouvert ?</p>
+        <p class="bubble out">Bonjour, oui. Je suis l'assistant automatique de l'agence. Trois questions rapides : avez-vous le permis et un véhicule ?</p>
+        <p class="bubble in">Oui, les deux.</p>
+        <p class="bubble out">Merci. La responsable peut vous recevoir jeudi à 10 h ou vendredi à 14 h. Quel créneau vous convient ?</p>
+      </div>
+      <figcaption>Illustration du fonctionnement prévu. Ce n'est pas un échange réel.</figcaption>
+    </figure>
+  </header>
+
+  <main>
+
+    <section class="block" aria-labelledby="t-prevu">
+      <h2 id="t-prevu">Ce que l'assistant doit faire</h2>
+      <p class="section-lead">Voici ce que je veux construire. Les agences pilotes diront quoi faire en premier.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Répondre aux candidats</h3>
+          <p>Chaque candidature reçoit une réponse rapide, y compris le soir et le week-end. L'assistant pose vos questions de présélection et propose un créneau d'entretien.</p>
+        </article>
+        <article class="card">
+          <h3>Relancer votre vivier</h3>
+          <p>Quand un poste s'ouvre, il reprend contact avec vos anciens candidats et vos anciens salariés, dans le respect des durées de conservation des données.</p>
+        </article>
+        <article class="card">
+          <h3>Chercher un remplaçant</h3>
+          <p>En cas d'absence, il contacte les intervenants disponibles et vous présente ceux qui acceptent. C'est vous qui validez.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block honest" aria-labelledby="t-vrai">
+      <h2 id="t-vrai">Où en est le projet</h2>
+      <ul class="plain">
+        <li>Le produit n'est pas encore construit. Cette page sert à vérifier que le besoin existe.</li>
+        <li>Il n'y a ni client ni résultat à vous montrer pour l'instant.</li>
+        <li>Des entretiens avec des dirigeants d'agence sont en cours pour comprendre le terrain avant de développer.</li>
+        <li>Deux règles sont déjà fixées : l'assistant se présentera toujours comme un assistant automatique, et il n'écartera jamais un candidat seul.</li>
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="t-pilote">
+      <h2 id="t-pilote">Ce que le pilote implique pour vous</h2>
+      <ol class="steps">
+        <li>
+          <h3>Un échange de 20 minutes</h3>
+          <p>Par téléphone, sur votre façon de recruter et de gérer les absences aujourd'hui.</p>
+        </li>
+        <li>
+          <h3>Un accès à la première version</h3>
+          <p>Dès qu'elle existe, réglée avec vos propres questions de présélection.</p>
+        </li>
+        <li>
+          <h3>Vos retours orientent la suite</h3>
+          <p>Ce que les agences pilotes demandent est construit en priorité.</p>
+        </li>
+      </ol>
+      <p class="fineprint">
+        Le pilote s'adresse aux agences privées d'aide à domicile de 20 à 150 intervenants, franchisées ou indépendantes.
+        La durée et le périmètre du test seront fixés avec vous avant tout démarrage. Proposer votre agence ne vous engage à rien.
+      </p>
+    </section>
+
+    <section class="block form-block" id="inscription" aria-labelledby="t-form">
+      <h2 id="t-form">Proposer mon agence</h2>
+      <p class="section-lead">Deux minutes suffisent. Les champs marqués d'un astérisque sont obligatoires.</p>
+
+      <form name="agences-pilotes" method="POST" action="/merci" data-netlify="true" netlify-honeypot="site-web">
+        <input type="hidden" name="form-name" value="agences-pilotes">
+        <p class="hp" aria-hidden="true">
+          <label>Ne pas remplir ce champ : <input name="site-web" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="grid">
+          <p class="field">
+            <label for="nom">Nom et prénom *</label>
+            <input id="nom" name="nom" type="text" autocomplete="name" required>
+          </p>
+          <p class="field">
+            <label for="agence">Nom de l'agence *</label>
+            <input id="agence" name="agence" type="text" autocomplete="organization" required>
+          </p>
+          <p class="field">
+            <label for="fonction">Votre fonction *</label>
+            <select id="fonction" name="fonction" required>
+              <option value="">Choisir</option>
+              <option>Gérant ou directeur d'agence</option>
+              <option>Responsable de secteur ou coordinateur</option>
+              <option>Autre</option>
+            </select>
+          </p>
+          <p class="field">
+            <label for="taille">Nombre d'intervenants *</label>
+            <select id="taille" name="intervenants" required>
+              <option value="">Choisir</option>
+              <option>Moins de 20</option>
+              <option>20 à 50</option>
+              <option>51 à 150</option>
+              <option>Plus de 150</option>
+            </select>
+          </p>
+          <p class="field">
+            <label for="email">E-mail *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </p>
+          <p class="field">
+            <label for="tel">Téléphone</label>
+            <input id="tel" name="telephone" type="tel" autocomplete="tel">
+          </p>
+          <p class="field">
+            <label for="logiciel">Logiciel de planning</label>
+            <select id="logiciel" name="logiciel">
+              <option value="">Choisir</option>
+              <option>Ximi</option>
+              <option>Ogust</option>
+              <option>Apologic</option>
+              <option>Autre</option>
+              <option>Aucun</option>
+            </select>
+          </p>
+          <fieldset class="field">
+            <legend>Le plus difficile aujourd'hui</legend>
+            <label class="choice"><input type="radio" name="difficulte" value="Recruter"> Recruter</label>
+            <label class="choice"><input type="radio" name="difficulte" value="Remplacer les absences"> Remplacer les absences</label>
+            <label class="choice"><input type="radio" name="difficulte" value="Les deux"> Les deux</label>
+          </fieldset>
+        </div>
+
+        <p class="field">
+          <label for="message">Ce qu'un tel assistant devrait faire en premier pour vous</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </p>
+
+        <p class="consent">
+          <label class="choice">
+            <input type="checkbox" name="accord-contact" value="oui" required>
+            J'accepte d'être recontacté au sujet de ce projet pilote. *
+          </label>
+        </p>
+
+        <p class="submit-row">
+          <button class="button" type="submit">Envoyer ma demande</button>
+          <span class="cta-note">Aucun e-mail automatique ne part : je vous recontacte personnellement.</span>
+        </p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <h2>Vos données</h2>
+    <p>
+      Les informations saisies servent uniquement à vous recontacter au sujet du projet pilote.
+      Elles sont enregistrées chez Netlify (États-Unis), l'hébergeur de cette page, et ne sont transmises à personne d'autre.
+      Elles sont supprimées sur simple demande, et au plus tard douze mois après votre envoi.
+    </p>
+    <p>
+      Pour consulter, corriger ou supprimer vos données :
+      <span class="todo">[à compléter : nom du responsable du projet et e-mail de contact]</span>
+    </p>
+  </footer>
+
+</body>
+</html>
